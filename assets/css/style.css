@@ -759,4 +759,148 @@ body {
   }
 }
 
+.breadcrumb {
+  margin-top: 7px;
+  margin-bottom: 9px;
+}
+.breadcrumb__wrap ul {
+  display: inline-flex;
+  list-style: none;
+  gap: 36px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.breadcrumb__wrap ul li {
+  position: relative;
+}
+.breadcrumb__wrap ul li::after {
+  content: "\f105";
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #667479;
+  position: absolute;
+  right: -19px;
+  top: 3px;
+}
+.breadcrumb__wrap ul a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #667479;
+}
+
+.section-5 {
+  padding: 60px 0;
+}
+.section-5__wrap {
+  display: flex;
+  gap: 20px;
+}
+.section-5__left {
+  width: calc(25% - 10px);
+}
+.section-5__right {
+  width: calc(75% - 10px);
+}
+.section-5__head {
+  display: flex;
+  justify-content: space-between;
+}
+.section-5__head .box-filter__title {
+  display: none;
+}
+.section-5__title {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 24px;
+  color: #003459;
+  font-weight: 700;
+}
+.section-5__list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.section-5__list .product-item {
+  width: calc((100% - 40px) / 3);
+}
+.section-5__list .product-item__info-item::after {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .section-5__left {
+    display: none;
+  }
+  .section-5__right {
+    width: 100%;
+  }
+  .section-5__head .box-filter__title {
+    display: block;
+  }
+}
+@media (max-width: 575.98px) {
+  .section-5__list .product-item {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 400px) {
+  .section-5__list .product-item {
+    width: 100%;
+  }
+}
+
+.box-filter__title i {
+  font-size: 20px;
+}
+.box-filter__title label {
+  color: #003459;
+  font-size: 20px;
+  font-weight: 700;
+}
+.box-filter__group-list {
+  color: #00171f;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ebeeef;
+  padding: 16px 0;
+}
+.box-filter__group-item {
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+.box-filter__group-item input {
+  margin: 0;
+  border: 1px solid #667479;
+}
+.box-filter__group-item label {
+  color: #00171f;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pagination ul li {
+  height: 34px;
+  display: inline-flex;
+  padding: 0 11.5px;
+  align-items: center;
+}
+.pagination ul li a {
+  color: #003459;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 /*# sourceMappingURL=style.css.map */
