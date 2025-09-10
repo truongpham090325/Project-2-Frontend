@@ -1,0 +1,150 @@
+extends ./layouts/default.pug
+include ./mixins/product-item.pug
+
+block title
+  title Trang chủ
+
+block main
+  //- Section-1
+  section.section-1
+    .container
+      .section-1__wrap
+        .section-1__content
+          img(src="assets/images/section-1-bg1.svg" class="section-1__bg-1")
+          h1(class="section-1__title")
+            .section-1__title-main Thêm Một Bạn
+            .section-1__title-sub Thêm Ngàn Niềm Vui!
+          p(class="section-1__desc") Có một con thú cưng đồng nghĩa với việc bạn có thêm niềm vui mới. Chúng tôi có hơn 200 con thú cưng khác nhau có thể đáp ứng nhu cầu của bạn!
+          .section-1__buttons
+            a(href="#" class="button-outline")
+              |Giới Thiệu
+              i(class="fa-solid fa-circle-play")
+            a(href="#" class="button") Khám Phá Ngay
+          img(src="assets/images/section-1-bg2.svg" class="section-1__bg-2")
+        .section-1__image
+          img(src="assets/images/image-1.png" class="section-1__image-main")
+          img(src="assets/images/section-1-bg3.svg" class="section-1__bg-3")
+  //- End section-1
+
+  //- Section-2
+  -
+    var pets = [
+      {
+        image: 'assets/images/product-1.jpg',
+        title: 'MO231 - Pomeranian Trắng',
+        gender: 'Đực',
+        age: '02 tháng',
+        price: '6.900.000 VND'
+      },
+      {
+        image: 'assets/images/product-2.jpg',
+        title: 'MO502 - Poodle Tiny Vàng',
+        gender: 'Cái',
+        age: '02 tháng',
+        price: '3.900.000 VND'
+      },
+      {
+        image: 'assets/images/product-3.jpg',
+        title: 'MO102 - Poodle Tiny Sepia',
+        gender: 'Đực',
+        age: '02 tháng',
+        price: '4.000.000 VND'
+      },
+      {
+        image: 'assets/images/product-4.jpg',
+        title: 'MO512 - Alaskan Malamute',
+        gender: 'Đực',
+        age: '03 tháng',
+        price: '8.900.000 VND'
+      },
+      {
+        image: 'assets/images/product-5.jpg',
+        title: 'MO231 - Pembroke Corgi',
+        gender: 'Đực',
+        age: '02 tháng',
+        price: '7.900.000 VND'
+      },
+      {
+        image: 'assets/images/product-6.jpg',
+        title: 'MO502 - Pembroke Corgi',
+        gender: 'Cái',
+        age: '02 tháng',
+        price: '9.000.000 VND'
+      },
+      {
+        image: 'assets/images/product-7.jpg',
+        title: 'MO231 - Pomeranian Trắng',
+        gender: 'Cái',
+        age: '02 tháng',
+        price: '6.500.000 VND'
+      },
+      {
+        image: 'assets/images/product-8.jpg',
+        title: 'MO512 - Poodle Tiny',
+        gender: 'Đực',
+        age: '02 tháng',
+        price: '5.000.000 VND'
+      }
+    ];
+
+
+  section(class="section-2")
+    .container
+      .box-head
+        .box-head__left
+          .box-head__title-sub Có gì mới?
+          h2(class="box-head__title") một số vật nuôi của chúng tôi
+        .box-head__right
+          a(href="#" class="button-outline") Xem Thêm
+            i(class="fa-solid fa-chevron-right")
+      .section-2__wrap
+        each pet in pets
+          +product-item(pet)
+      .section-2__button-bottom
+        a(href="#" class="button-outline") Xem Thêm
+          i(class="fa-solid fa-chevron-right")
+  //- End section-2
+
+  //- Section-3
+  include partials/section-3.pug
+  //- End section-3
+
+  //- Section-4
+  section.section-4
+    .container
+      .box-head
+        .box-head__left
+          .box-head__title-sub Có thể bạn đã biết?
+          h2(class="box-head__title") Kiến thức thú cưng hữu ích
+        .box-head__right
+          a(href="#" class="button-outline") Xem Thêm
+            i(class="fa-solid fa-chevron-right")
+      .section-4__wrap
+        .blog-item
+          a(href="#")
+            .blog-item__image
+              img(src="assets/images/blog-item-1.jpg", alt="")
+            .blog-item__content
+              .blog-item__tag Kiến thức thú cưng
+              h3.blog-item__title Pomeranian là gì? Cách nhận biết chó Pomeranian
+              p.blog-item__desc Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.
+        .blog-item
+          a(href="#")
+            .blog-item__image
+              img(src="assets/images/blog-item-2.jpg", alt="")
+            .blog-item__content
+              .blog-item__tag Kiến thức thú cưng
+              h3.blog-item__title Chế độ ăn cho chó bạn cần biết
+              p.blog-item__desc Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu.
+        .blog-item
+          a(href="#")
+            .blog-item__image
+              img(src="assets/images/blog-item-3.jpg", alt="")
+            .blog-item__content
+              .blog-item__tag Kiến thức thú cưng
+              h3.blog-item__title Tại sao chó cắn phá đồ đạc và cách phòng ngừa hiệu quả
+              p.blog-item__desc Chó cắn là hiện tượng phổ biến trong quá trình phát triển. Tuy nhiên, không ai muốn thấy đồ đạc, vật dụng quan trọng của mình bị chó cắn.
+      .section-2__button-bottom
+        a(href="#" class="button-outline") Xem Thêm
+          i(class="fa-solid fa-chevron-right")
+  //- End section-4

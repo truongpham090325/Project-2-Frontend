@@ -1,0 +1,83 @@
+doctype html 
+html
+  head
+    block title
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css")
+    link(rel="stylesheet", href="assets/css/style.css")
+  body
+    //- Header
+    header(class="header")
+      .container
+        .header__wrap
+          button(class="header__menu-mobile")
+            <i class="fa-solid fa-bars"></i>
+          .header__logo
+            a(href="index.html")
+              img(src="assets/images/logo.svg" alt="Monito")
+          nav.header__menu
+            ul
+              li
+                a(href="index.html") Trang Chủ
+              li
+                a(href="#") Danh Mục
+              li
+                a(href="#") Giới Thiệu
+              li
+                a(href="#") Liên Hệ
+          form(class="header__form" action="#")
+            input(name="keyword" placeholder="Nhập từ khóa...")
+            button
+              i(class="fa-solid fa-magnifying-glass")
+          a(href="#" class="button") Tham Gia Cộng Đồng
+          button(class="header__search-mobile")
+            i(class="fa-solid fa-magnifying-glass")
+    //- End header
+
+    block main
+
+    //- Footer
+    footer(class="footer")
+      .container
+        .footer__top
+          .footer__content Đăng ký ngay để không bỏ lỡ các chương trình của chúng tôi
+          form(action="#" class="footer__form")
+            input(placeholder="Nhập email của bạn...")
+            button Đăng Ký Ngay
+        .footer__middle
+          nav.footer__middle-links
+            ul
+              li
+                a(href="index.html") Trang Chủ
+              li
+                a(href="#") Danh Mục
+              li
+                a(href="#") Giới Thiệu
+              li
+                a(href="#") Liên Hệ
+          nav.footer__socials
+            ul
+              li
+                a(href="#")
+                  i(class="fa-brands fa-facebook")
+              li
+                a(href="#")
+                  i(class="fa-brands fa-twitter")
+              li
+                a(href="#")
+                  i(class="fa-brands fa-instagram")
+              li
+                a(href="#")
+                  i(class="fa-brands fa-youtube")
+        <hr>
+        .footer__bottom
+          .footer__copyright © 2023 Monito. All rights reserved.
+          .footer__logo
+            a(href="index.html")
+              img(src="assets/images/logo.svg" alt="Monito")
+          .footer__bottom-links
+            ul
+              li
+                a(href="#") Điều khoản dịch vụ
+              li
+                a(href="#") Chính sách bảo mật
+    //- End footer
