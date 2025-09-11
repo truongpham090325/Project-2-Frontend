@@ -1,0 +1,128 @@
+extends ./layouts/default.pug
+include ./mixins/product-item.pug
+
+block title
+  title Chi tiết sản phẩm
+
+block main
+  //- Section-6
+  section.section-6
+    .container
+      .section-6__wrap
+        .section-6__images
+          .section-6__images-main
+            img(src="assets/images/ctsp-image-main.jpg")
+          .section-6__images-thumb
+            img(src="assets/images/ctsp-image-1.png")
+            img(src="assets/images/ctsp-image-2.jpg")
+            img(src="assets/images/ctsp-image-3.jpg")
+            img(src="assets/images/ctsp-image-4.jpg")
+            img(src="assets/images/ctsp-image-5.jpg")
+            img(src="assets/images/ctsp-image-6.png")
+        .section-6__content
+          //- Breadcrumb
+          .breadcrumb
+            nav.breadcrumb__wrap
+              ul
+                li
+                  a(href="#") Trang chủ
+                li
+                  a(href="#") Chó
+                li
+                  a(href="#") Chó con
+                li
+                  a(href="#") Shiba Inu Màu Nâu Đỏ
+          //- End breadcrumb
+          h1.section-6__title Shiba Inu Màu Nâu Đỏ
+          .section-6__price 12.000.000 VND
+          .section-6__buttons
+            a(href="#" class="button") Liên hệ
+            a(href="#" class="button-outline")
+              <i class="fa-solid fa-comment"></i>
+              |Chat với Monito
+          .section-6__table
+            table
+              tbody
+                tr
+                  td SKU
+                  td #1000078
+                tr
+                  td Giống
+                  td Cái
+                tr
+                  td Tuổi
+                  td 2 tháng
+                tr
+                  td Kích thước
+                  td Nhỏ
+                tr
+                  td Màu sắc
+                  td Nâu đỏ
+                tr
+                  td Mô tả ngắn
+                  td Giống thuần chủng Shih Tzu. Cấu trúc cơ thể tốt. Với chứng chỉ MKA và Microchip. Cha từ dòng dõi vô địch.
+          .box-share
+            .box-share__label
+              <i class="fa-solid fa-share-nodes"></i>
+              label(for="") Chia sẻ:
+            .box-share__list
+              a(href="#" target="_blank") <i class="fa-brands fa-facebook"></i>
+              a(href="#" target="_blank") <i class="fa-brands fa-twitter"></i>
+              a(href="#" target="_blank") <i class="fa-brands fa-instagram"></i>
+              a(href="#" target="_blank") <i class="fa-brands fa-youtube"></i>
+  //- End section-6
+
+  //- Section-7
+  section.section-7
+    .container
+      h2.section-7__title Khách hàng của chúng tôi
+      .section-7__images
+        img(src="assets/images/section-8-image1.png")
+        img(src="assets/images/section-8-image2.jpg")
+        img(src="assets/images/section-8-image3.jpg")
+        img(src="assets/images/section-8-image4.jpg")
+        img(src="assets/images/section-8-image5.png")
+  //- End section-7
+
+  //- Section-2
+  -
+    var pets = [
+      {
+        image: 'assets/images/product-1.jpg',
+        title: 'MO231 - Pomeranian Trắng',
+        gender: 'Đực',
+        age: '02 tháng',
+        price: '6.900.000 VND'
+      },
+      {
+        image: 'assets/images/product-2.jpg',
+        title: 'MO502 - Poodle Tiny Vàng',
+        gender: 'Cái',
+        age: '02 tháng',
+        price: '3.900.000 VND'
+      },
+      {
+        image: 'assets/images/product-3.jpg',
+        title: 'MO102 - Poodle Tiny Sepia',
+        gender: 'Đực',
+        age: '02 tháng',
+        price: '4.000.000 VND'
+      },
+      {
+        image: 'assets/images/product-4.jpg',
+        title: 'MO512 - Alaskan Malamute',
+        gender: 'Đực',
+        age: '03 tháng',
+        price: '8.900.000 VND'
+      }
+    ];
+  .section-2
+    .container
+      .box-head
+        .box-head__left
+          .box-head__sub-title Có gì mới?
+          h2.box-head__title Xem thêm chó con
+      .section-2__wrap
+        each pet in pets
+          +product-item(pet, "product-detail.html")
+  //- End section-2

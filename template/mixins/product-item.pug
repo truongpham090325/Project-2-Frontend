@@ -1,6 +1,6 @@
-mixin product-item(pet)
+mixin product-item(pet, link)
   .product-item
-    a(href="product-list.html")
+    a(href=link)
       .product-item__image
         img(src=pet.image alt=pet.title)
       .product-item__content
